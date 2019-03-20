@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
@@ -24,6 +25,7 @@ public class ArticleDetailActivity extends AppCompatActivity
     private long mStartId;
 
     private ViewPager mPager;
+    private View mUpButton;
     private MyPagerAdapter mPagerAdapter;
 
     @Override
