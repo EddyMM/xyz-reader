@@ -92,7 +92,7 @@ public class SelectionBuilder {
 
     private void ensureSelectionArgs() {
     	if (mSelectionArgs == null) {
-    		mSelectionArgs = new ArrayList<String>();
+    		mSelectionArgs = new ArrayList<>();
     	}
     }
 
