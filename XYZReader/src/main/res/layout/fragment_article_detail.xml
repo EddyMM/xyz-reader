@@ -105,8 +105,8 @@
         </FrameLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <ImageButton android:id="@+id/share_fab"
-        android:background="@drawable/add_fab_background"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
         android:layout_gravity="bottom|end"
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
