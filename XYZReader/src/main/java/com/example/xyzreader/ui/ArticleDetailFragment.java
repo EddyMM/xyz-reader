@@ -2,7 +2,6 @@ package com.example.xyzreader.ui;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
@@ -10,10 +9,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.format.DateUtils;
@@ -163,13 +159,10 @@ public class ArticleDetailFragment extends Fragment implements
                                 + "</font>"));
 
             }
-            Spanned body = Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)
-                    .substring(0, 500)
-                    .replaceAll("(\r\n|\n)", "<br />"));
 
-            Log.i("ARTICLE BODY", body.toString());
-            Toast.makeText(getActivity(), "Body length: " + body.toString().length(), Toast.LENGTH_LONG).show();
-//            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n|\n)", "<br />")));
+            Spanned body = Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)
+                    .replaceAll("(\r\n|\n)", "<br />"));
+            
             bodyView.setText(body);
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
